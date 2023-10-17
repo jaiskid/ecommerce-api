@@ -7,6 +7,8 @@ import {
   getUserStatics,
 } from "../../models/users/User";
 
+
+// get all users
 export const getAllUsers = async (
   req: express.Request,
   res: express.Response
@@ -21,6 +23,7 @@ export const getAllUsers = async (
   }
 };
 
+// Get users statics 
 export const getUserStats = async (
   req: express.Request,
   res: express.Response
@@ -34,6 +37,7 @@ export const getUserStats = async (
   }
 };
 
+// delete users by ID
 export const deleteUser = async (
   req: express.Request,
   res: express.Response
@@ -50,6 +54,8 @@ export const deleteUser = async (
   }
 };
 
+
+// update users by ID
 export const updateUser = async (
   req: express.Request,
   res: express.Response

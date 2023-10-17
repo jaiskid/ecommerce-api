@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 import express from "express";
+
+// Mongo DB schema for Product
 const ProductSchema = new mongoose.Schema(
   {
     title: { type: String, required: true, unique: true },
@@ -13,6 +15,7 @@ const ProductSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// DB utility function for DB CRUD operation
 export const ProductModel = mongoose.model("Product", ProductSchema);
 export const updproduct = (req: express.Request) =>
   ProductModel.findByIdAndUpdate(

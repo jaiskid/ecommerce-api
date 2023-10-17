@@ -22,6 +22,7 @@ export const addnewcart = async (
   }
 };
 
+// Making updates to existing cart
 export const updatecart = async (
   req: express.Request,
   res: express.Response
@@ -37,6 +38,7 @@ export const updatecart = async (
   }
 };
 
+// delete record in cart
 export const deletecart = async (
   req: express.Request,
   res: express.Response
@@ -51,6 +53,7 @@ export const deletecart = async (
   }
 };
 
+// find carts details by ID for a user
 export const findcart = async (req: express.Request, res: express.Response) => {
   try {
     const cart = req;
@@ -62,6 +65,7 @@ export const findcart = async (req: express.Request, res: express.Response) => {
   }
 };
 
+// find all carts
 export const findAllcart = async (
   req: express.Request,
   res: express.Response

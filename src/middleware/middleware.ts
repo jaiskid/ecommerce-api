@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 import { getUserBySessionToken } from "../../src/models/users/User";
 require("dotenv").config();
 
+
+// verify JWT token 
 export const verifyToken = async (
   req: express.Request,
   res: express.Response,
@@ -28,6 +30,7 @@ export const verifyToken = async (
   }
 };
 
+// Verification of session cookie
 export const isAuthenticated = async (
   req: express.Request,
   res: express.Response,
@@ -55,6 +58,7 @@ export const isAuthenticated = async (
   }
 };
 
+// checking if current user is owner
 export const isOwner = async (
   req: express.Request,
   res: express.Response,

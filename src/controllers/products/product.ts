@@ -8,6 +8,7 @@ import {
   findProductByID,
 } from "../../models/product/Product";
 
+// Insert new product
 export const addnewProduct = async (
   req: express.Request,
   res: express.Response
@@ -23,6 +24,7 @@ export const addnewProduct = async (
   }
 };
 
+//Update product by ID
 export const updateProduct = async (
   req: express.Request,
   res: express.Response
@@ -38,6 +40,7 @@ export const updateProduct = async (
   }
 };
 
+// delete product by ID
 export const deleteProduct = async (
   req: express.Request,
   res: express.Response
@@ -52,6 +55,7 @@ export const deleteProduct = async (
   }
 };
 
+//find Product by ID
 export const findProduct = async (
   req: express.Request,
   res: express.Response
@@ -65,6 +69,8 @@ export const findProduct = async (
     return res.sendStatus(400);
   }
 };
+
+// find All products
 
 export const findAllProduct = async (
   req: express.Request,

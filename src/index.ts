@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
 require("dotenv").config();
-
+// Main execution file for project 
 mongoose
   .connect(`${process.env.MONGO_URL}`)
   .then(() => console.log("Mongo connected successfully"))

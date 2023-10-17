@@ -9,6 +9,7 @@ import {
   monthlyrevenue,
 } from "../../models/orders/Order";
 
+//Add new order
 export const addneworder = async (
   req: express.Request,
   res: express.Response
@@ -23,6 +24,7 @@ export const addneworder = async (
   }
 };
 
+// update existing order 
 export const updateorder = async (
   req: express.Request,
   res: express.Response
@@ -38,6 +40,7 @@ export const updateorder = async (
   }
 };
 
+// delete existing order
 export const deleteorder = async (
   req: express.Request,
   res: express.Response
@@ -52,6 +55,7 @@ export const deleteorder = async (
   }
 };
 
+// find order by ID
 export const findorder = async (
   req: express.Request,
   res: express.Response
@@ -66,6 +70,7 @@ export const findorder = async (
   }
 };
 
+//find all the orders
 export const findAllorder = async (
   req: express.Request,
   res: express.Response
@@ -79,6 +84,7 @@ export const findAllorder = async (
   }
 };
 
+// total revenues from orders
 export const findrevenue = async (
   req: express.Request,
   res: express.Response

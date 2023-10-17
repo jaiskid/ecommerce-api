@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+// Mongo DB schema for User collection
+
 const UserSchema = new mongoose.Schema(
   {
     username: {
@@ -19,6 +21,8 @@ const UserSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+// Utility function for Mongoose application for DB operation
 
 export const UserModel = mongoose.model("User", UserSchema);
 export const getUserStatics = () =>
@@ -42,6 +46,8 @@ export const getUserStatics = () =>
       },
     },
   ]);
+
+
 export const getUsers = () => UserModel.find().sort({ _id: -1 });
 export const getUserByEmail = (email: string) => UserModel.findOne({ email });
 export const getUserBySessionToken = (sessionToken: string) =>

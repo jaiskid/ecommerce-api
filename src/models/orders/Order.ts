@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import express from "express";
+//Mongo DB Schema for Orders
 const OrderSchema = new mongoose.Schema(
   {
     userId: {
@@ -34,6 +35,7 @@ const OrderSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Utility function for DB crud operation
 export const OrderModel = mongoose.model("Order", OrderSchema);
 
 export const updorder = (req: express.Request) =>

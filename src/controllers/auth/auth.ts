@@ -3,6 +3,7 @@ import { getUserByEmail, createUser } from "../../models/users/User";
 import { random, authentication } from "../../authhelper/authhelper";
 import jwt from "jsonwebtoken";
 require("dotenv").config();
+// Login existing users
 export const login = async (req: express.Request, res: express.Response) => {
   try {
     const { email, password } = req.body;
@@ -54,6 +55,7 @@ export const login = async (req: express.Request, res: express.Response) => {
   }
 };
 
+// Signup new users
 export const register = async (req: express.Request, res: express.Response) => {
   try {
     const { email, password, username } = req.body;

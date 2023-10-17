@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import express from "express";
+//Mongo DB schema for Cart
 const CartSchema = new mongoose.Schema(
   {
     userId: {
@@ -22,6 +23,7 @@ const CartSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+//Utility function for DB CRUD operations
 export const CartModel = mongoose.model("Cart", CartSchema);
 
 export const updcart = (req: express.Request) =>
