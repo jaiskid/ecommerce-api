@@ -82,5 +82,8 @@
       - /cart/addnew
       - /cart/:id
       - /cart
+        
+Please do import ecommerce-apicollection.json in postman that file will help you to execute API endpoints 
+
   
   Author : Neeraj Jaiswal
